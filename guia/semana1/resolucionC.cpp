@@ -1,54 +1,34 @@
 // Example program
 #include <iostream>
 #include <string>
+#include "funciones.h"
 using namespace std;
 
-void swap_por_puntero(int *a, int *b) {
-    // TODO: implementar intercambio clásico usando *a, *b y una variable temporal.
-     int tmp = *a;
-     *a = *b;
-     *b = tmp;
-}
-void swap_si_mayor(int* p, int* q) {
-    // TODO: intercambiar solo si *p > *q.
-    if(*p > *q)
-    {
-        int temp = *p;
-        *p = *q;
-        *q = temp;
-    }
-}
 
-void swap_si_menor(int* p, int* q) {
-    // TODO (opcional): intercambiar solo si *p < *q.
-     if(*p < *q)
-    {
-        int temp = *p;
-        *p = *q;
-        *q = temp;
-    }
-}
-
-void set_si_positivo(int* p, int valor) {
-    // TODO (opcional): escribir 'valor' en *p solo si valor > 0.
-    if(valor > 0)
-    {
-        *p = valor;
-    }
-}
 
 int main()
 {
-      int a; 
-    cout << "Ingresa el primer numero: ";
+        // -------------------------------------------------------------------------
+    // (C) Paso por puntero: pruebas de swap y variantes
+    // -------------------------------------------------------------------------
+    // TODO:
+    // 1) Implementar swap_por_puntero arriba y probar con:
+    //    int x=5, y=9;  swap_por_puntero(&x,&y);
+    // 2) Implementar swap_si_mayor y probar casos (p.ej., 10 y 3, luego 2 y 7).
+    // 3) (Opcional) swap_si_menor y set_si_positivo.
+
+    int a; 
+    cout << "Ingresa el primer numero: "<<endl;
     cin >> a;
     int b; 
-    cout << "Ingresa el segundo numero: ";
+    cout << "Ingresa el segundo numero: "<<endl;
     cin >> b;
 
+
     int *aPt = &a;
-    //int *bPt = &b;
-    //swap_por_puntero(aPt,bPt);
+    int *bPt = &b;
+    //Objeto o;
+    swap_por_puntero(aPt,bPt); //intercambio clasico
     //swap_si_mayor(aPt,bPt);
     //swap_si_menor(aPt,bPt);
     
