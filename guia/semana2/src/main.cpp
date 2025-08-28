@@ -40,8 +40,18 @@ int main() {
     } else {
         cout << "Error al guardar los datos.\n";
     }
+        // 5) Liberar memoria
+    liberar_arreglo(lecturas);
+
+
+    //imprimir datos del nuevo archivo
+    cout << "Se guardaron " << leidos << " valores desde '" << archivoSalida << "'.\n";
+    imprimirArchivoNuevo(archivoSalida, leidos);
+
 
     // 5) Liberar memoria
+
+
     liberar_arreglo(lecturas);
 
     return 0;

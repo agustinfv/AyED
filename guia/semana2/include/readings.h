@@ -2,7 +2,7 @@
 #define READINGS_H
 
 #include <string>
-
+using namespace std;
 // Crea un arreglo dinámico de 'size' floats y devuelve el puntero.
 // Retorna nullptr si size <= 0 o si falla la reserva.
 float* crear_arreglo(int size);
@@ -21,4 +21,5 @@ bool guardar_en_archivo(const std::string& ruta, const float* arr, int size);
 // Imprime las lecturas por pantalla.
 void imprimir(const float* arr, int size);
 
+void imprimirArchivoNuevo(string&ruta, int size);
 #endif // READINGS_H
